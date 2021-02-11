@@ -2,7 +2,7 @@ import os
 
 data_dir = '/root/input/chest_xray'
 
-print("The files in the data are: ")
+print("The folders in the data are: ")
 print(os.listdir(data_dir))
 
 classes = os.listdir(os.path.join(data_dir + "/train"))
@@ -43,3 +43,16 @@ normal_files_test = os.listdir(os.path.join(data_dir, "test/NORMAL"))
 # 234
 print(
     f"Number of images for Pneumonia class (test set) : {len(normal_files_test)}")
+
+
+
+# Output ================================================
+# The folders in the data are: 
+# ['train', 'val', 'test']
+# The classes are: ['PNEUMONIA', 'NORMAL']
+# Number of images for Pneumonia class (train set) : 3875
+# Number of images for Normal class (train set) : 1341
+# Number of images for Pneumonia class (val set) : 8
+# Number of images for Pneumonia class (val set) : 8
+# Number of images for Pneumonia class (test set) : 390
+# Number of images for Pneumonia class (test set) : 234
