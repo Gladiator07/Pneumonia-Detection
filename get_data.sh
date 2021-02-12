@@ -1,8 +1,8 @@
 #!/bin/bash
 
 """
-This script will set your kaggle api-key to the api and download the data
-and arange it in folders
+This script will set your kaggle api-key to Kaggle api, download data
+and arrange it in train, val, test directories
 """
 
 # Put your Kaggle api key path here
