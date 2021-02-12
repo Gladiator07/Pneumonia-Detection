@@ -12,3 +12,6 @@ TEST_N_DIR = os.path.join(DATA_DIR, "test/NORMAL")
 
 VALID_P_DIR = os.path.join(DATA_DIR, "test/PNEUMONIA")
 VALID_N_DIR = os.path.join(DATA_DIR, "test/NORMAL")
+
+
+BATCH_SIZE = 16
