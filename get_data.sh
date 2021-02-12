@@ -9,11 +9,11 @@ and arange it in folders
 kaggle_api_key_path = /content/drive/MyDrive/Kaggle/kaggle.json
 
 # This snippet will install kaggle api and connect your api-key to it
-!pip install -q kaggle
-!mkdir -p ~/.kaggle
-!cp /content/drive/MyDrive/Kaggle/kaggle.json ~/.kaggle/
-!cat ~/.kaggle/kaggle.json
-!chmod 600 ~/.kaggle/kaggle.json
+pip install -q kaggle
+mkdir -p ~/.kaggle
+cp /content/drive/MyDrive/Kaggle/kaggle.json ~/.kaggle/
+cat ~/.kaggle/kaggle.json
+chmod 600 ~/.kaggle/kaggle.json
 
 # This snippet will download the data in root folder and arange it in
 # train test val folders
