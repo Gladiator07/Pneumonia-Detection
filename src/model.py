@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torch.nn.modules.module import T
 from torchvision import models
 from utils import accuracy
 
@@ -50,5 +51,10 @@ class PneumoniaResnet(PneumoniaClassificationBase):
     
     def freeze(self):
         # To freeze the residual layers
+        for param in self.network.parameters():
+            param.requires_grad = True
+    
+    def unfreeze(self):
+        # Unfreeze all layers
         for param in self.network.parameters():
             param.requires_grad = True
