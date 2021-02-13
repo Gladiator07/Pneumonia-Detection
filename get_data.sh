@@ -1,9 +1,9 @@
 #!/bin/bash
 
-"""
-This script will set your kaggle api-key to Kaggle api, download data
-and arrange it in train, val, test directories
-"""
+
+echo "This script will set your kaggle api-key to Kaggle api, download data
+and arrange it in train, val, test directories"
+
 
 # Put your Kaggle api key path here
 echo "Fetching your Kaggle API Key"
