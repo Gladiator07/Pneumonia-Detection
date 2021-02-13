@@ -30,9 +30,9 @@ class PneumoniaDataset(Dataset):
 
 
 train_transform = T.Compose([T.Resize((256, 256)),
-                             T.RandomAffine(30)],
+                             T.RandomAffine(30),
                             T.ColorJitter(),
-                            T.ToTensor())
+                            T.ToTensor()])
 
 val_transform = T.Compose([T.Resize(256, 256),
                            T.ToTensor()])
@@ -44,4 +44,7 @@ val_dataset = PneumoniaDataset(val_df, transform=val_transform)
 
 
 # PyTorch Data Loaders
-# train_dl = DataLoader(tra)
+train_dl = DataLoader(train_dataset, config.BATCH_SIZE, shuffle=True, num_workers=4, pin_memory=True)
+val_dl = DataLoader(val_dataset, config.BATCH_SIZE*2, shuffle=True, num_workers=4, pin_memory=True)
+
+
